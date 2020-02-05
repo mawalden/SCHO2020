@@ -30,6 +30,7 @@ pdat <- process.data(p1, begin.time = 1, model = "POPAN",
 
 p1.plot.results=run.plot.popan()
 popan.derived(pdat,p1.plot.results,drop=TRUE)
+p1.plot.results$pmod
 
 ##Plot 2 model
 
@@ -42,6 +43,7 @@ pdat <- process.data(p2, begin.time = 1, model = "POPAN",
 
 p2.plot.results=run.plot.popan()
 popan.derived(pdat,p2.plot.results,drop=TRUE)
+p2.plot.results$pmod
 
 ##Plot 3 model
 
@@ -52,6 +54,7 @@ pdat <- process.data(p3, begin.time = 1, model = "POPAN",
                    time.intervals = c(13, 15, 19, 24, 16, 40))
 p3.plot.results=run.plot.popan()
 popan.derived(pdat,p3.plot.results,drop=TRUE)
+p3.plot.results$pmod
 
 ##Plot 4 model
 
@@ -64,3 +67,4 @@ pdat <- process.data(p4, begin.time = 1, model = "POPAN",
 
 p4.plot.results=run.plot.popan()
 popan.derived(pdat,p4.plot.results,drop=TRUE)
+p4.plot.results$pmod
