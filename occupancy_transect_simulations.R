@@ -1,3 +1,16 @@
+##############################
+## Devan-Song, Anne, M. A. Walden, Haley A. Moniz, Justine M. Fox,
+## Mary-Ruth Low, Emma Wilkinson, Scott W. Buchanan, and Nancy E. Karraker.
+## "Confirmation Bias Perpetuates Century-Old Ecological Misconception:
+## Evidence Against 'Secretive' Behavior of Eastern Spadefoots." Journal
+## of Herpetology 55, no. 2 (2021): 137-150.
+##
+## R code to create occupancy model for Fig. 4
+##
+## Author: M. A. Walden
+## Date: Sept. 29, 2020
+## Contact: mar.walden@gmail.com
+##############################
 
 ##-- set working directory to data source folder
 #setwd("")
@@ -15,8 +28,8 @@ surveys <- 20
 iter <- seq(1,1000,by=1)
 iternum <- length(iter)
 
-psi <- .5 ##Here is where you change occupancy as appropriate for your design
-p <- .75  ##Here is where you change detection probability as appropriate for your design
+psi <- .95 ##Here is where you change occupancy as appropriate for your design
+p <- .95  ##Here is where you change detection probability as appropriate for your design
 
 home <- array(NA,dim=c(iternum,transects,surveys))
 
@@ -50,16 +63,26 @@ for(j in 1:transects){
 }
 
 results <- colMeans(home, na.rm=T)
+png(file="psi95p95t20s20.png",width=3, height=3.2, units="in",res=600)
 contour(seq(1,transects,by=1),seq(1,surveys,by=1),results,
-        xlim=c(0,20), ylim=c(0,20), labcex=1,
+        xlim=c(0,5), ylim=c(0,5),
+        labcex=.4,
+        cex.axis=.7,
+        drawlabels=TRUE,
+        axes=TRUE,
         frame.plot=TRUE,
         levels=c(.1,.2,.3,.4,.5,.6,.7,.8,.9,1),
-        col=c(1,1,1,1,1,1,1,4,1,1),
-        lwd=c(1,1,1,1,1,1,1,2,1,1),
+        col=c(1,1,1,1,1,1,1,1,1,1),
+        lwd=c(1,1,1,1,1,1,1,4,1,1),
         method="flattest",
         crt=90,
         vfont=c("sans serif", "plain"),
-        xlab="Transects",ylab="Surveys")
+        xlab="",ylab="")
+text(3.5,4.5,expression(italic(Psi)==0.95),cex=.6,adj=c(0,NA))
+text(3.5,4,expression(italic(p)==0.95),cex=.6,adj=c(0,NA))
+dev.off()
 ##Only run this line if you want to save a new workspace. Change the filename as appropriate.
 ##psi = occupancy, p = detection, t = # transects, s = # surveys
-save(results, file="psi5p75t20s20.RData")
+save(results, file="psi95p95t20s20.RData")
+
+
