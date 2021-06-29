@@ -1,3 +1,19 @@
+##############################
+## Devan-Song, Anne, M. A. Walden, Haley A. Moniz, Justine M. Fox,
+## Mary-Ruth Low, Emma Wilkinson, Scott W. Buchanan, and Nancy E. Karraker.
+## "Confirmation Bias Perpetuates Century-Old Ecological Misconception:
+## Evidence Against 'Secretive' Behavior of Eastern Spadefoots." Journal
+## of Herpetology 55, no. 2 (2021): 137-150.
+##
+## R code to estimate abundance from plot data for Fig. 5 and Appendix 6
+##
+## Author: M. A. Walden
+## Date: Sept. 29, 2020
+## Contact: mar.walden@gmail.com
+##############################
+
+
+
 library(RMark)
 library(FSA)
 
