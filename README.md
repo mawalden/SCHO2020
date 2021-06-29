@@ -1,8 +1,8 @@
 # A. Devan-Song et al R code and datasets for manuscript: Devan-Song, A., M.A. Walden, H.A. Moniz, J.M. Fox, M.R. Low, E. Wilkinson and N.E. Karraker. 2021. Confirmation bias fuels ecological misconception: evidence against 'secretive' nature of eastern spadefoots (Scaphiopus h. holbrookii). Journal of Herpetology 55(2):137–150.
 
 
-- Written by A. Devan-Song 2020 
-- Corvallis, Oregon, USA 
+- Written by A. Devan-Song and M.A. Walden
+- in Corvallis, Oregon, USA and Reno, NV, USA. 2020-2021
 
 This repo contains 6 .csv files and 4 .R files to reproduce Figure 3, 5, and appendix graphs for the upcoming manuscript in review at Journal of Herpetology (Devan-Song et al.)
 
